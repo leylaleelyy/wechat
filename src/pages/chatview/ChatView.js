@@ -47,6 +47,7 @@ class ChatView extends Component{
                         })
                     }
                 </div>
+                <div id='room'></div>
                 <footer>
                     <div id='voice-btn'></div>
                     <textarea id='input-message'
