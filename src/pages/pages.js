@@ -4,7 +4,7 @@ import './header.css'
 import MainList from "./mainpage/MainList";
 import Friends from "./friends/Friends";
 import Circle from "./circle/Circle";
-import Login from "./login/Login";
+import Todo from "./todo/Todo";
 
 class TabComponent extends React.Component{
     render(  ){
@@ -37,9 +37,8 @@ class TabComponent extends React.Component{
                     </div>
                     <div name = {<span>我</span>} className='page1'>
                         <div className='header'>
-
                         </div>
-                        <Login></Login>
+                        <Todo></Todo>
                     </div>
                 </TabsControl>
             </div>

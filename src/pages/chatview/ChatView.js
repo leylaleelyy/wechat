@@ -28,7 +28,7 @@ class ChatView extends Component{
             <Fragment>
                 <header className='chat-header'>
                     <div className='img-back'
-                         onClick={()=>{window.location.href="/"}} >
+                         onClick={()=>{window.location.href="/home"}} >
                     </div>
                     <span className='chat-title'>某   人</span>
                 </header>

@@ -6,7 +6,7 @@ export default class Passage extends Component {
             <Fragment>
                 <header className='passage-header'>
                     <div className='img-back'
-                         onClick={()=>{window.location.href="/"}} >
+                         onClick={()=>{window.location.href="/home"}} >
                              </div>
                     <span className='page-title'>订阅号消息</span>
                 </header>

@@ -8,7 +8,7 @@ class MainList extends Component{
     render() {
         return(
             <div className='page-box'>
-                <div onClick={()=>{window.location.href="/passage"}}
+                <div onClick={()=>{window.location.href="/home/passage"}}
                      className='passage'>
                     <div className='img-box'></div>
                     <div className='text-box'>
@@ -16,7 +16,7 @@ class MainList extends Component{
                         <span className='small'>[2条]共青团中央：为祖国发声音，正式首发...</span>
                     </div>
                 </div>
-                <div onClick={()=>{window.location.href="/chat-view"}}
+                <div onClick={()=>{window.location.href="/home/chat-view"}}
                     className='chat'>
                     <div className='img-box'></div>
                     <div className='text-box'>

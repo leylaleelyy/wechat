@@ -36,7 +36,7 @@ class FriendCircle extends Component{
             <Fragment>
                 <header className='circle-header'>
                     <div className='img-back'
-                         onClick={()=>{window.location.href="/"}}>
+                         onClick={()=>{window.location.href="/home"}}>
                     </div>
                     <div className='img-edi'>
                         <div className="dropdown-content">

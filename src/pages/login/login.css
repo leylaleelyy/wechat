@@ -1,0 +1,28 @@
+#login-box{
+    width:60%;
+    height:30%;
+    margin:50px auto;
+    padding-top: 20px;
+    background:#fff;
+    color:black;
+    box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+#login-name{
+    display: block;
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 10px auto;
+    color: #777;
+}
+#login-btn{
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+    color: #eeeeee;
+    background-color: #3194d0;
+    border-radius: 15px;
+    margin: 10px auto;
+    text-align: center;
+}
