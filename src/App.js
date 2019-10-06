@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React ,{Fragment}from 'react';
+import { BrowserRouter as Router,Route} from 'react-router-dom';
+import TabComponent from "./pages/pages";
+import Passage from "./pages/passage/Passage";
+import FriendCircle from "./pages/circle/FriendCircle";
+import Issue from "./pages/circle/issue/Issue";
+import ChatView from "./pages/chatview/ChatView";
+import {Provider} from 'react-redux';
+import store from "./store";
+class App extends React.Component {
+    render(){
+        return(
+            <Provider store={store}>
+                <Router >
+                    <Fragment>
+                        <Route path="/"  exact component={TabComponent} />
+                        <Route path="/chat-view"  component={ChatView} />
+                        <Route path="/passage"  component={Passage} />
+                        <Route path="/friend-circle"  exact component={FriendCircle} />
+                        <Route path="/friend-circle/issue"  component={Issue} />
+                    </Fragment>
+                </Router>
+            </Provider>
+            
+        )
+    }
 }
-
 export default App;
