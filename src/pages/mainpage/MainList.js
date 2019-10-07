@@ -32,7 +32,12 @@ class MainList extends Component{
                     </div>
                 </div>
                 <div>
-                    <div className='img-box'></div>
+                    <div className='img-box' id='ic'></div>
+                    <div className='text-box'>
+                        <span >公众号</span><br/>
+                        <span className='small'>我和我的祖国，一刻不能分离！</span>
+                    </div>
+
                 </div>
             </div>
         )

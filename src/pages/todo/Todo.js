@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import 'antd/dist/antd.css';
 import {Input,Button,List} from "antd";
 import store from '../../store'
+import {connect} from 'react-redux'
 import {CHANGE_INPUT_VALUE,ADD_TODO_ITEM,DELETE_TODO_ITEM} from '../../store/actionTypes'
 import {getIunputChangeAction} from '../../store/actionCreators'
 
@@ -64,4 +65,4 @@ class Todo extends Component{
     }
 }
 
-export default Todo;
+export default connect()(Todo);

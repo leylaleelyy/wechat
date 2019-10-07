@@ -75,12 +75,23 @@ display: none;
     padding: 10px;
 }
 .detail-img{
+     border: 1px solid grey;
+     background-image: url("../icon/dingyue.jpg");
+     background-size: 100%;
+    background-repeat: no-repeat;
+     border-radius: 5px;
+     height: 190px;
+ }
+.detail-img2{
     border: 1px solid grey;
+    background-image: url("../icon/pandeng.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     border-radius: 5px;
-    height: 120px;
+    height: 160px;
 }
 .block > .detail {
-    max-height: 163px;
+    max-height: 250px;
     margin-bottom: 10px;
     overflow: hidden;
 }

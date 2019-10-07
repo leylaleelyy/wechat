@@ -19,6 +19,9 @@
     border-radius: 5px;
     border: gray solid 1px;
 }
+#ic{
+    background-image: url("../icon/gongzhonghao.svg");
+}
 
 .passage>.img-box{
     background-image: url("../icon/dingyuehao.svg");

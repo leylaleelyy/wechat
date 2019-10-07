@@ -237,3 +237,17 @@
     color: blue;
     display: inline-block;
 }
+#photo{
+    height: 200px;
+    background-image: url("../icon/photo.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#delete1{
+    float: bottom;
+    color: blue;
+    display: inline-block;
+}
+#delete1:checked +  #issue-content{
+    display: none;
+}

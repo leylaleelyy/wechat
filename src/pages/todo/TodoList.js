@@ -1,4 +1,6 @@
 import React, {Component, Fragment} from 'react';
+import 'antd/dist/antd.css';
+import {Input,Button} from "antd";
 import './style.css';
 import TodoItem from "./TodoItem";
 
@@ -36,22 +38,24 @@ class TodoList extends Component{//继承了Component组件
     render() {
         return(
             <Fragment>
-                <div>
-                    <label htmlFor='input'>INPUT</label>
-                    <input
+                <div style={{marginTop:"10px"}}>
+                    <label htmlFor='input' style={{color:'grey',marginRight:'5px'}}>INPUT</label>
+                    <Input
                         id='input'
                         className='input'
+                        placeholder='todo info '
                         value={this.state.inputValue}
+                        style={{width:'200px',marginRight:"10px"}}
                         onChange={this.handleInputChange.bind(this)}
                         //ref={(input)=>{this.input=input}}//引用指向DOM
                     />
-                    <button onClick={this.handleBtnClick.bind(this)}>Submit</button>
+                    <Button onClick={this.handleBtnClick.bind(this)} type='primary'>Submit</Button>
                 </div>
-                <ul>
+                <ul style={{width:'80%',margin:"10px auto"}}>
                     {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
                         this.state.list.map((item,index)=> {
                             return(
-                                <div>
+                                <Fragment >
                                     <TodoItem content={item} index={index} key={index}
                                           deleteItem={this.handleItemDelete.bind(this)}
                                     />{/*通过content属性把内容传给子组件*/}
@@ -61,7 +65,7 @@ class TodoList extends Component{//继承了Component组件
                                     dangerouslySetInnerHTML={{__html:item}}//jsx里还有一个对象
                                     >
                                 </li>*/}
-                                </div>)
+                                </Fragment>)
 
                         })
                     }

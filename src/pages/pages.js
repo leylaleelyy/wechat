@@ -6,10 +6,11 @@ import './header.css'
 import MainList from "./mainpage/MainList";
 import Friends from "./friends/Friends";
 import Circle from "./circle/Circle";
-import Todo from "./todo/Todo";
+import TodoList from "./todo/TodoList";
 import {NavSearch,SearchWrapper} from "./header";
 import {CSSTransition} from "react-transition-group";
 import {Link} from "react-router-dom";
+import {actionCreators as loginActionCreators} from '../pages/login/store';
 
 class TabComponent extends React.Component{
     constructor(props){
@@ -29,7 +30,7 @@ class TabComponent extends React.Component{
         })
     }
     render(  ){
-        const {login} =this.props;
+        const {login,logout} =this.props;
         return(
             <div className="container">
                 <TabsControl>
@@ -111,9 +112,9 @@ class TabComponent extends React.Component{
                                 <span className={this.state.focused?'focused iconfont':'iconfont'}>&#xe63f;</span>
                             </SearchWrapper>
                         </div>
-                        <Todo></Todo>
+                        <TodoList></TodoList>
                         {
-                            login?<div>退出</div>:<Link to='/'><div>登录成功</div></Link>
+                            login?<div onClick={logout} style={{color:'red'}}>退出</div>:<Link to='/'><div>登录</div></Link>
                         }
 
                     </div>
@@ -124,12 +125,14 @@ class TabComponent extends React.Component{
 }
 const mapStateToProps=(state)=>{
     return{
-        login:state.login.login
+        login:state.get('login').get('login')
     }
 };
 const mapDispatchToProps=(dispatch)=>{
     return{
-
+        logout(){
+            dispatch(loginActionCreators.logout())
+        }
     }
 };
 export default connect(mapStateToProps,mapDispatchToProps)(TabComponent);

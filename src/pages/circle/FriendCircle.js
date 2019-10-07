@@ -70,6 +70,16 @@ class FriendCircle extends Component{
                     <div className='icon-img'></div>
                     <div className='my-name'>AfterWeb</div>
                 </div>
+                <div className='issue-content' >
+                    <div id='my-icon'></div>
+                    <div id='issue-content'>
+                        <div id='name'>AfterWeb</div>
+                        <div>长白山的天池真好看</div>
+                        <div id='photo'></div>
+                        <span id='delete1' >删除</span>
+                    </div>
+
+                </div>
                 <div>
                     {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
                         this.state.list.map((item,index)=> {

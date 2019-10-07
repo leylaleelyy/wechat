@@ -32,6 +32,9 @@
 .wechat>.img-box2{
     background-image: url("../icon/lianxirenmingdan.svg");
 }
+#gongzhonghao{
+    background-image: url("../icon/gongzhonghao.svg");
+}
 
 div .text-box2{
     text-align: left;
@@ -55,4 +58,5 @@ div .text-box2{
     display: block;
     text-align: left;
     padding-left: 10px;
+    background-color: #eeeeee;
 }

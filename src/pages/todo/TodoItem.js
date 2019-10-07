@@ -1,4 +1,5 @@
 import React from'react';
+import 'antd/dist/antd.css';
 
 class TodoItem extends React.Component{
     //当父组件的render函数执行，子组件的render也会重新运行一次
@@ -22,7 +23,7 @@ class TodoItem extends React.Component{
 
     render() {
         return(//获取了传递过来的content
-            <div onClick={this.handleClick.bind(this)}>{this.props.content}</div>
+            <div className='todo' onClick={this.handleClick.bind(this)}>{this.props.content}</div>
         )
     }
 }
