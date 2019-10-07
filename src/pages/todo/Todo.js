@@ -39,8 +39,8 @@ class Todo extends Component{
 
     render() {
         return(
-            <div style={{marginTop:'10px',marginLeft:'10px'}}>
-                <div>
+            <div style={{marginTop:'10px'}}>
+                <div style={{align:'center'}}>
                     <Input
                         value={this.state.inputValue}
                         placeholder='todo info '
@@ -50,7 +50,7 @@ class Todo extends Component{
                     )} type='primary'>Submit</Button>
                 </div>
                 <List
-                    style={{marginTop:'10px',width:'300px'}}
+                    style={{margin:'10px auto ',width:'300px'}}
                     bordered
                     dataSource={this.state.list}
                     renderItem={(item,index)=> (

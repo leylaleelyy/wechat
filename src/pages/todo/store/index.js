@@ -1,4 +1,4 @@
-import {createStore,compose} from "redux";
+import {createStore} from "redux";
 import reducer from "./reducer";
 //store会更新数据
 const store=createStore(reducer,

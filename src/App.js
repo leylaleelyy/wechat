@@ -1,12 +1,12 @@
 import React ,{Fragment}from 'react';
+import {Provider} from 'react-redux';
 import { BrowserRouter as Router,Route} from 'react-router-dom';
 import TabComponent from "./pages/pages";
 import Passage from "./pages/passage/Passage";
 import FriendCircle from "./pages/circle/FriendCircle";
 import ChatView from "./pages/chatview/ChatView";
 import Login from "./pages/login/Login";
-import {Provider} from 'react-redux';
-
+import'./pages/icon/iconfont/iconfont.css'
 import store from "./store";
 class App extends React.Component {
     render(){
@@ -22,7 +22,6 @@ class App extends React.Component {
                     </Fragment>
                 </Router>
             </Provider>
-            
         )
     }
 }
