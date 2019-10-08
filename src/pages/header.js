@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-export const SearchWrapper=styled.div`
+
+export const SearchWrapper = styled.div`
     float:left;
     display:inline-block;
     position:relative;
@@ -28,8 +29,8 @@ export const SearchWrapper=styled.div`
         }
     }
 `;
-export const NavSearch=styled.input.attrs({
-    placeholder:'Search'
+export const NavSearch = styled.input.attrs({
+  placeholder: 'Search'
 })`
     height:30px;
     width:160px;

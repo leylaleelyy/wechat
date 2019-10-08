@@ -8,17 +8,17 @@ import logger from 'redux-logger';
 import {composeWithDevTools} from "redux-devtools-extension";
 import {applyMiddleware} from "redux";
 
-const store=createStore(
-    rootReducer,
-    composeWithDevTools(
-        applyMiddleware(logger)
-    )
-    );
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(
+    applyMiddleware(logger)
+  )
+);
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById('root')
 );
 
 

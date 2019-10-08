@@ -1,34 +1,40 @@
-.page1{
-    height: 100%;
+.page1 {
+  height: 100%;
 }
-.header{
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    background-color: darkgray;
-    height: 8%;
-    width: 100%;
+
+.header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  background-color: darkgray;
+  height: 8%;
+  width: 100%;
 
 }
-.header span{
-    float: left;
-    margin-top: 2%;
-    margin-left: 2%;
-    font-size: 1.5em;
+
+.header span {
+  float: left;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 1.5em;
 }
-.header div{
-    height: 80%;
-    width: 10%;
-    margin-top: 2%;
-    margin-right: 2%;
-    background-repeat: no-repeat;
+
+.header div {
+  height: 80%;
+  width: 10%;
+  margin-top: 2%;
+  margin-right: 2%;
+  background-repeat: no-repeat;
 }
-.header div.search{
-    background-image: url("icon/sousuo.svg");
+
+.header div.search {
+  background-image: url("icon/sousuo.svg");
 }
-.header div.add{
-     background-image: url("icon/add.svg");
+
+.header div.add {
+  background-image: url("icon/add.svg");
 }
-.tab_chat{
-    background-color: black;
+
+.tab_chat {
+  background-color: black;
 }

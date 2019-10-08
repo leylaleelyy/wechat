@@ -1,5 +1,6 @@
 import styled from "styled-components";
-export const LoginWrapper =styled.div`
+
+export const LoginWrapper = styled.div`
     position:absolute;
     left:0;
     right:0;
@@ -7,7 +8,7 @@ export const LoginWrapper =styled.div`
     top:56px;
     background:#eee;
 `;
-export const LoginBox =styled.div`
+export const LoginBox = styled.div`
     width:60%;
     height:50%;
     margin:50px auto;

@@ -1,11 +1,12 @@
 import styled from "styled-components";
-export const MatchWrapper=styled. div`
+
+export const MatchWrapper = styled.div`
     position:fixed;
     top:8%;
     right:2%;
     float:right;
 `;
-export const Match=styled.a`
+export const Match = styled.a`
     display:block;
     font-size:0.9em;
     text-align:center;
