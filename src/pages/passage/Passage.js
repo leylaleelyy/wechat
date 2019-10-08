@@ -1,16 +1,16 @@
 import React, {Component, Fragment} from "react";
 import './passage.css';
+import {Link} from "react-router-dom";
+import {Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 
-export default class Passage extends Component {
+class Passage extends Component {
   render() {
-    return (
+    const {loginStatus}=this.props;
+    if(loginStatus){return (
       <Fragment>
         <header className='passage-header'>
-          <div className='img-back'
-               onClick={() => {
-                 window.location.href = "/home"
-               }}>
-          </div>
+          <Link to="/home" className='img-back'></Link>
           <span className='page-title'>订阅号消息</span>
         </header>
         <div className='always'>
@@ -66,6 +66,13 @@ export default class Passage extends Component {
           </div>
         </section>
       </Fragment>
-    )
+    )}else {
+      return <Redirect to='/'/>
+    }
   }
 }
+const mapState = (state) => ({
+  loginStatus: state.getIn(['login', 'login'])
+});
+
+export default connect(mapState, null)(Passage);

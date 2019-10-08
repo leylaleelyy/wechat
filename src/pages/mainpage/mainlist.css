@@ -26,7 +26,7 @@
   background-image: url("../icon/gongzhonghao.svg");
 }
 
-.passage > .img-box {
+.passage  .img-box {
   background-image: url("../icon/dingyuehao.svg");
 }
 
@@ -34,7 +34,7 @@
   background-image: url("../icon/lianxirenmingdan.svg");
 }
 
-.chat > .img-box {
+.chat  .img-box {
   background-image: url("../icon/qunliao.svg");
 }
 

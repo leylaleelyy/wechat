@@ -1,5 +1,8 @@
 import React, {Component, Fragment} from "react";
 import "./chatview.css"
+import {Link} from "react-router-dom";
+import {Redirect} from 'react-router-dom'
+import {connect} from 'react-redux';
 
 class ChatView extends Component {
   constructor(props) {//构造函数最优先执行
@@ -26,44 +29,48 @@ class ChatView extends Component {
   }
 
   render() {
-    return (
-      <Fragment>
-        <header className='chat-header'>
-          <div className='img-back'
-               onClick={() => {
-                 window.location.href = "/home"
-               }}>
+    const {loginStatus}=this.props;
+    if(loginStatus){
+      return (
+        <Fragment>
+          <header className='chat-header'>
+            <Link to="/home" className='img-back'></Link>
+            <span className='chat-title'>某   人</span>
+          </header>
+          <div>
+            {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
+              this.state.list.map((item, index) => {
+                return (
+                  <div className='chat-content' key={index}>
+                    <div id='my-chat-icon'></div>
+                    <div id='chat-content'>
+                      <div id='chat-name'>AfterWeb</div>
+                      <div id='message-box'> {item}</div>
+                    </div>
+
+                  </div>)
+              })
+            }
           </div>
-          <span className='chat-title'>某   人</span>
-        </header>
-        <div>
-          {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
-            this.state.list.map((item, index) => {
-              return (
-                <div className='chat-content' key={index}>
-                  <div id='my-chat-icon'></div>
-                  <div id='chat-content'>
-                    <div id='chat-name'>AfterWeb</div>
-                    <div id='message-box'> {item}</div>
-                  </div>
-
-                </div>)
-            })
-          }
-        </div>
-        <div id='room'></div>
-        <footer>
-          <div id='voice-btn'></div>
-          <textarea id='input-message'
-                    value={this.state.inputValue}
-                    onChange={this.handleInputChange.bind(this)}
-          ></textarea>
-          <div id='send-message' onClick={this.handleBtnClick.bind(this)}>Send</div>
-        </footer>
-      </Fragment>
-    )
-
+          <div id='room'></div>
+          <footer>
+            <div id='voice-btn'></div>
+            <textarea id='input-message'
+                      value={this.state.inputValue}
+                      onChange={this.handleInputChange.bind(this)}
+            ></textarea>
+            <div id='send-message' onClick={this.handleBtnClick.bind(this)}>Send</div>
+          </footer>
+        </Fragment>
+      )
+    }else{
+      return <Redirect to='/'/>
+    }
   }
 }
 
-export default ChatView;
+const mapState = (state) => ({
+  loginStatus: state.getIn(['login', 'login'])
+});
+
+export default connect(mapState, null)(ChatView);

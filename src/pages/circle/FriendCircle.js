@@ -1,5 +1,8 @@
 import React, {Component, Fragment} from "react";
 import './friendcircle.css'
+import {Link} from "react-router-dom";
+import {Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class FriendCircle extends Component {
   constructor(props) {//构造函数最优先执行
@@ -33,75 +36,79 @@ class FriendCircle extends Component {
   }
 
   render() {
-    return (
-      <Fragment>
-        <header className='circle-header'>
-          <div className='img-back'
-               onClick={() => {
-                 window.location.href = "/home"
-               }}>
-          </div>
-          <div className='img-edi'>
-            <div className="dropdown-content">
+    const {loginStatus}=this.props;
+    if(loginStatus){
+      return (
+        <Fragment>
+          <header className='circle-header'>
+            <Link to="/home" className='img-back'></Link>
+            <div className='img-edi'>
+              <div className="dropdown-content">
                             <textarea id='input'
                                       value={this.state.inputValue}
                                       onChange={this.handleInputChange.bind(this)} className='issue'></textarea>
-              <button onClick={this.handleBtnClick.bind(this)} className='submit'>Submit</button>
+                <button onClick={this.handleBtnClick.bind(this)} className='submit'>Submit</button>
+              </div>
             </div>
+          </header>
+          <div className='head-bg'>
+            <div className="container1">
+              <span className="pillar"></span>
+              <span className="pillar"></span>
+              <span className="pillar"></span>
+              <span className="pillar"></span>
+              <span className="pillar"></span>
+            </div>
+            <div className="container-bg">
+              <div>W</div>
+              <div>E</div>
+              <div>L</div>
+              <div>C</div>
+              <div>O</div>
+              <div>M</div>
+              <div>E</div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div className='icon-img'></div>
+            <div className='my-name'>AfterWeb</div>
           </div>
-        </header>
-        <div className='head-bg'>
-          <div className="container1">
-            <span className="pillar"></span>
-            <span className="pillar"></span>
-            <span className="pillar"></span>
-            <span className="pillar"></span>
-            <span className="pillar"></span>
-          </div>
-          <div className="container-bg">
-            <div>W</div>
-            <div>E</div>
-            <div>L</div>
-            <div>C</div>
-            <div>O</div>
-            <div>M</div>
-            <div>E</div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div className='icon-img'></div>
-          <div className='my-name'>AfterWeb</div>
-        </div>
-        <div className='issue-content'>
-          <div id='my-icon'></div>
-          <div id='issue-content'>
-            <div id='name'>AfterWeb</div>
-            <div>长白山的天池真好看</div>
-            <div id='photo'></div>
-            <span id='delete1'>删除</span>
-          </div>
+          <div className='issue-content'>
+            <div id='my-icon'></div>
+            <div id='issue-content'>
+              <div id='name'>AfterWeb</div>
+              <div>长白山的天池真好看</div>
+              <div id='photo'></div>
+              <span id='delete1'>删除</span>
+            </div>
 
-        </div>
-        <div>
-          {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
-            this.state.list.map((item, index) => {
-              return (
-                <div className='issue-content' key={index}>
-                  <div id='my-icon'></div>
-                  <div id='issue-content'>
-                    <div id='name'>AfterWeb</div>
-                    <div> {item}</div>
-                    <span id='delete' onClick={this.handleItemDelete.bind(this, index)}>删除</span>
-                  </div>
+          </div>
+          <div>
+            {//一个js表达式,循环输出list数组里的内容,一个回调函数接受内容和下标
+              this.state.list.map((item, index) => {
+                return (
+                  <div className='issue-content' key={index}>
+                    <div id='my-icon'></div>
+                    <div id='issue-content'>
+                      <div id='name'>AfterWeb</div>
+                      <div> {item}</div>
+                      <span id='delete' onClick={this.handleItemDelete.bind(this, index)}>删除</span>
+                    </div>
 
-                </div>)
-            })
-          }
-        </div>
-      </Fragment>
-    )
+                  </div>)
+              })
+            }
+          </div>
+        </Fragment>
+      )
+    }else{
+      return <Redirect to='/'/>
+    }
   }
 }
+const mapState = (state) => ({
+  loginStatus: state.getIn(['login', 'login'])
+});
 
-export default FriendCircle;
+export default connect(mapState, null)(FriendCircle);
