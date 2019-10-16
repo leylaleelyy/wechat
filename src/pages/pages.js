@@ -49,7 +49,8 @@ class TabComponent extends React.Component {
                     className={this.state.focused ? 'focused' : ''}
                     onFocus={this.handleInputFocus.bind(this)}
                     onBlur={this.handleInputBlur.bind(this)}
-                  ></NavSearch>
+                  >
+                  </NavSearch>
                 </CSSTransition>
                 <span className={this.state.focused ? 'focused iconfont' : 'iconfont'}>&#xe63f;</span>
               </SearchWrapper>
@@ -69,7 +70,8 @@ class TabComponent extends React.Component {
                     className={this.state.focused ? 'focused' : ''}
                     onFocus={this.handleInputFocus.bind(this)}
                     onBlur={this.handleInputBlur.bind(this)}
-                  ></NavSearch>
+                  >
+                  </NavSearch>
                 </CSSTransition>
                 <span className={this.state.focused ? 'focused iconfont' : 'iconfont'}>&#xe63f;</span>
               </SearchWrapper>
@@ -89,7 +91,8 @@ class TabComponent extends React.Component {
                     className={this.state.focused ? 'focused' : ''}
                     onFocus={this.handleInputFocus.bind(this)}
                     onBlur={this.handleInputBlur.bind(this)}
-                  ></NavSearch>
+                  >
+                  </NavSearch>
                 </CSSTransition>
                 <span className={this.state.focused ? 'focused iconfont' : 'iconfont'}>&#xe63f;</span>
               </SearchWrapper>
@@ -109,7 +112,8 @@ class TabComponent extends React.Component {
                     className={this.state.focused ? 'focused' : ''}
                     onFocus={this.handleInputFocus.bind(this)}
                     onBlur={this.handleInputBlur.bind(this)}
-                  ></NavSearch>
+                  >
+                  </NavSearch>
                 </CSSTransition>
                 <span className={this.state.focused ? 'focused iconfont' : 'iconfont'}>&#xe63f;</span>
               </SearchWrapper>

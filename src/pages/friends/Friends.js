@@ -12,20 +12,20 @@ class Friends extends Component {
             <span className='text'>新的朋友</span>
           </div>
         </div>
-        <div className='chat'>
+        <div>
           <div className='img-box2'></div>
           <div className='text-box2'>
             <span className='text'>群聊</span>
           </div>
         </div>
-        <div className='wechat'>
+        <div>
           <div className='img-box2'></div>
           <div className='text-box2'>
             <span className='text'>标签</span>
           </div>
         </div>
         <div>
-          <div className='img-box2' id='gongzhonghao'></div>
+          <div className='img-box2'></div>
           <div className='text-box2'>
             <span className='text'>公众号</span>
           </div>

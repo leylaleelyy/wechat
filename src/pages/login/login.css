@@ -1,5 +1,6 @@
 #body {
   height: 100%;
+
   background-image: url("../icon/backg.jpg");
   background-size: 100%;
 }
@@ -9,28 +10,35 @@
   height: 30%;
   margin: 0px auto;
   padding-top: 20px;
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+
   background: rgba(61, 121, 182, 0.5);
   color: black;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
 }
 
 #login-name {
   display: block;
+
+  margin: 10px auto;
+  padding: 0 10px;
   width: 70%;
   height: 30px;
+
   line-height: 30px;
-  padding: 0 10px;
-  margin: 10px auto;
+
   color: #777;
 }
 
 #login-btn {
+  margin: 10px 65px;
   width: 40%;
   height: 30px;
+
+  border-radius: 15px;
   line-height: 30px;
+  text-align: center;
+
   color: #eeeeee;
   background-color: #3194d0;
-  border-radius: 15px;
-  margin: 10px 65px;
-  text-align: center;
 }

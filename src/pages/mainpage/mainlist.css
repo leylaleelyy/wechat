@@ -6,55 +6,60 @@
 
 .page-box > div {
   height: 10%;
-  border-bottom: #a8afb5 solid .5px;
+
+  border-bottom: .5px solid #a8afb5 ;
 }
 
 .img-box {
   float: left;
+
   position: relative;
   top: 5px;
   left: 5px;
   height: 80%;
   width: 13%;
+
+  border: gray solid 1px;
+  border-radius: 5px;
+
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 5px;
-  border: gray solid 1px;
 }
 
-#ic {
-  background-image: url("../icon/gongzhonghao.svg");
-}
-
-.passage  .img-box {
+.passage .img-box {
   background-image: url("../icon/dingyuehao.svg");
 }
 
-.chat > .img-box {
+.chat-view .img-box {
   background-image: url("../icon/lianxirenmingdan.svg");
 }
 
-.chat  .img-box {
+.many-chat .img-box {
   background-image: url("../icon/qunliao.svg");
 }
 
-.wechat > .img-box {
-  background-image: url("../icon/lianxirenmingdan.svg");
+.empty .img-box {
+  background-image: url("../icon/gongzhonghao.svg");
 }
 
 div .text-box {
-  text-align: left;
-  color: black;
   float: right;
+
   position: relative;
   top: 5px;
   height: 80%;
   width: 80%;
+
+  text-align: left;
+  color: black;
 }
 
 .small {
-  color: grey;
   display: inline-block;
+
   margin-top: 6px;
+
   font-size: .9em;
+
+  color: grey;
 }

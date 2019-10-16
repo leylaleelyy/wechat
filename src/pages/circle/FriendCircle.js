@@ -44,10 +44,12 @@ class FriendCircle extends Component {
             <Link to="/home" className='img-back'></Link>
             <div className='img-edi'>
               <div className="dropdown-content">
-                            <textarea id='input'
+                            <textarea className='issue'
+                                      id='input'
                                       value={this.state.inputValue}
-                                      onChange={this.handleInputChange.bind(this)} className='issue'></textarea>
-                <button onClick={this.handleBtnClick.bind(this)} className='submit'>Submit</button>
+                                      onChange={this.handleInputChange.bind(this)} >
+                            </textarea>
+                <button className='submit' onClick={this.handleBtnClick.bind(this)}>Submit</button>
               </div>
             </div>
           </header>
@@ -95,7 +97,6 @@ class FriendCircle extends Component {
                       <div> {item}</div>
                       <span id='delete' onClick={this.handleItemDelete.bind(this, index)}>删除</span>
                     </div>
-
                   </div>)
               })
             }

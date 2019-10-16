@@ -17,12 +17,10 @@ class Login extends Component {
             <button id='login-btn' onClick={() => this.props.login(this.account, this.password)}>登录</button>
           </div>
         </div>
-
       )
     } else {
       return <Redirect to='/home'/>
     }
-
   }
 }
 
@@ -33,7 +31,8 @@ const mapState = (state) => ({
 const mapDispatch = (dispatch) => ({
   login(accountElem, passwordElem) {
     dispatch(actionCreators.login(accountElem.value, passwordElem.value));
-    console.log(accountElem.value, passwordElem.value);
+    //console.log(accountElem.value, passwordElem.value);
   }
 });
+
 export default connect(mapState, mapDispatch)(Login);

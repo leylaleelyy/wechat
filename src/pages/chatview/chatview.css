@@ -1,40 +1,48 @@
 .chat-header {
   position: sticky;
   top: 0;
-  background-color: #cbcbcb;
   height: 8%;
   width: 100%;
   z-index: 100;
+
+  background-color: #cbcbcb;
+
 }
 
 .chat-title {
-  font-size: 1.5em;
   display: inline-block;
+
   margin-left: 3%;
   margin-top: 3%;
+
+  font-size: 1.5em;
 }
 
 .chat-content {
   display: flex;
-  margin-top: 5%;
-  margin-bottom: 5%;
   flex-direction: row-reverse;
   justify-content: flex-start;
+
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #my-chat-icon {
   float: right;
+
   position: relative;
   top: 5px;
   right: 10px;
   height: 60px;
   width: 60px;
+
+  border: gray solid 1px;
+  border-radius: 5px;
+
   background-image: url("../icon/touxiang.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  border-radius: 5px;
-  border: gray solid 1px;
 }
 
 #chat-content {
@@ -46,26 +54,30 @@
   text-align: right;
   font-weight: bold;
   color: black;
-
 }
 
 #message-box {
-  font-size: 1.5em;
-  padding: 10px;
-  background-color: #9eea6a;
   display: inline-block;
   float: right;
+
+  padding: 10px;
   border-radius: 15px;
+
+  font-size: 1.5em;
+
+  background-color: #9eea6a;
 }
 
 #chat-name::after {
+  content: ''; /*激活为元素*/
+  display: inline-block;
+
   position: relative;
   top: 35px; /*距离参考物顶端的距离*/
   right: -19px; /*距离参考物右端*/
-  content: ''; /*激活为元素*/
-  display: inline-block;
   width: 0;
   height: 0;
+
   border: solid 10px;
   border-color: transparent transparent transparent #9eea6a;
 }
@@ -80,15 +92,19 @@
 footer {
   position: fixed;
   bottom: 0;
-  background-color: #cbcbcb;
+
   height: 7%;
   width: 100%;
+
+  background-color: #cbcbcb;
 }
 
 #voice-btn {
+  float: left;
+
   width: 15%;
   height: 100%;
-  float: left;
+
   background-image: url("../icon/biaoqing.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -96,25 +112,30 @@ footer {
 }
 
 #input-message {
-  font-size: 1.3em;
   width: 65%;
   height: 100%;
+
+  font-size: 1.3em;
 }
 
 #send-message {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding-top: 3%;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
   float: right;
+
+  padding-top: 3%;
   width: 20%;
   height: 100%;
+
+  border: none;
   box-shadow: 8px 0 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #4CAF50; /* Green */
+
+  cursor: pointer;
 }
 
 #send-message:hover {

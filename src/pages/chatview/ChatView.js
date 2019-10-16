@@ -45,9 +45,8 @@ class ChatView extends Component {
                     <div id='my-chat-icon'></div>
                     <div id='chat-content'>
                       <div id='chat-name'>AfterWeb</div>
-                      <div id='message-box'> {item}</div>
+                      <div id='message-box'>{item}</div>
                     </div>
-
                   </div>)
               })
             }
@@ -58,7 +57,8 @@ class ChatView extends Component {
             <textarea id='input-message'
                       value={this.state.inputValue}
                       onChange={this.handleInputChange.bind(this)}
-            ></textarea>
+            >
+            </textarea>
             <div id='send-message' onClick={this.handleBtnClick.bind(this)}>Send</div>
           </footer>
         </Fragment>
