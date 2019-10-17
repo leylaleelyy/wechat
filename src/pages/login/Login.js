@@ -10,11 +10,11 @@ class Login extends Component {
     const {loginStatus} = this.props;
     if (!loginStatus) {
       return (
-        <div id='body'>
-          <div id='login-box'>
-            <input id='login-name' ref={(input) => this.account = input} placeholder='账号'/>
-            <input id='login-name' type='password' ref={(input) => this.password = input} placeholder='密码'/>
-            <button id='login-btn' onClick={() => this.props.login(this.account, this.password)}>登录</button>
+        <div id="body">
+          <div id="login-box">
+            <input className="login-name" ref={(input) => this.account = input} placeholder='账号'/>
+            <input className="login-name" type="password" ref={(input) => this.password = input} placeholder='密码'/>
+            <button id="login-btn" onClick={() => this.props.login(this.account, this.password)}>登录</button>
           </div>
         </div>
       )
